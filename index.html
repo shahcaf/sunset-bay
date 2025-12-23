@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset Bay - Liquid Glass Community</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Sunset Bay</a>
+            <nav class="nav">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link nav-cta" href="https://discord.gg/MPp67tMh52" target="_blank" rel="noopener">Join Discord</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Sunset Bay</h1>
+                <p class="hero-subtitle">A calm place to hang out, talk, and vibe</p>
+                <div class="button-group">
+                    <a href="https://discord.gg/MPp67tMh52" class="cta-button primary" target="_blank" rel="noopener">
+                        <i class="fab fa-discord"></i> Join Discord
+                    </a>
+                    <a href="about.html" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p class="about-text">Sunset Bay is a relaxed online hangout for people who enjoy calm conversations, music, and good energy. No pressure, no noise. Just people and vibes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌅</div>
+                    <h3>Sunset Chats</h3>
+                    <p>Relaxed conversations in our sunset-themed channels</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Music & Vibes</h3>
+                    <p>Share and discover new music in our listening parties</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Game Nights</h3>
+                    <p>Join our community game sessions and events</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌊</div>
+                    <h3>Chill Spaces</h3>
+                    <p>Voice channels for hanging out while you work or relax</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="cta-title">Join Our Community</h2>
+            <p class="cta-description">Sunset Bay lives on Discord. That's where the community is.</p>
+            <a href="https://discord.gg/MPp67tMh52" class="cta-button primary large" target="_blank" rel="noopener">
+                <i class="fab fa-discord"></i> Join Sunset Bay on Discord
+            </a>
+            <p class="cta-note">Fast. Simple. No forms.</p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sunset Bay Community. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.18 });
+
+        document.querySelectorAll('section:not(.hero)').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Sunset Bay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Sunset Bay</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link nav-cta" href="https://discord.gg/MPp67tMh52" target="_blank" rel="noopener">Join Discord</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="about">
+            <div class="container">
+                <h1 class="section-title">About Us</h1>
+                <div class="about-content">
+                    <p class="about-text">Sunset Bay is a relaxed online hangout for people who enjoy calm conversations, music, and good energy. No pressure, no noise. Just people and vibes.</p>
+                    <p class="about-text">We built Sunset Bay to feel like a quiet shoreline at dusk: warm colors, soft light, and a place you can return to every day.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">What You'll Find</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌅</div>
+                        <h3>Sunset Chats</h3>
+                        <p>Relaxed conversations in our sunset-themed channels</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Music & Vibes</h3>
+                        <p>Share and discover new music in our listening parties</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Game Nights</h3>
+                        <p>Join our community game sessions and events</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌊</div>
+                        <h3>Chill Spaces</h3>
+                        <p>Voice channels for hanging out while you work or relax</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sunset Bay Community. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.18 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

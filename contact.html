@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sunset Bay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Sunset Bay</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link active" href="contact.html">Contact</a>
+                <a class="nav-link nav-cta" href="https://discord.gg/MPp67tMh52" target="_blank" rel="noopener">Join Discord</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="about">
+            <div class="container">
+                <h1 class="section-title">Contact</h1>
+                <div class="about-content">
+                    <p class="about-text">The fastest way to reach Sunset Bay is on Discord.</p>
+                    <div class="button-group">
+                        <a href="https://discord.gg/MPp67tMh52" class="cta-button primary" target="_blank" rel="noopener">
+                            <i class="fab fa-discord"></i> Join Discord
+                        </a>
+                        <a href="index.html" class="cta-button">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <h2 class="cta-title">See you at sunset.</h2>
+                <p class="cta-description">Drop in, say hi, and enjoy the calm ocean-sunset vibe.</p>
+                <a href="https://discord.gg/MPp67tMh52" class="cta-button primary large" target="_blank" rel="noopener">
+                    <i class="fab fa-discord"></i> Join Sunset Bay on Discord
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sunset Bay Community. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.18 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
